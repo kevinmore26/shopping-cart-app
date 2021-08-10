@@ -3,28 +3,29 @@ import React, { useReducer } from "react";
 import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_ALL_FROM_CART } from "./types";
 import Context from "./Context";
 import Reducer from "./Reducer";
+import cat from "../assets/img/cat.jpeg"
 
 export default function GlobalState(props) {
   const products = [
     {
       id: 0,
-      title: "Gaming Mouse",
+      title: "producto 1",
       imageURL:
-        "https://m.media-amazon.com/images/I/51S6IQ2lGwL._AC_UY327_FMwebp_QL65_.jpg",
-      price: 49.5,
+        {cat},
+      price: 49,
     },
     {
       id: 1,
-      title: "Gaming Chair",
+      title: "producto 2",
       imageURL:
-        "https://m.media-amazon.com/images/I/61HEqHMkRhL._AC_UL480_FMwebp_QL65_.jpg",
+      {cat},
       price: 149.0,
     },
     {
       id: 2,
-      title: "Gaming Pad",
+      title: "producto 3",
       imageURL:
-        "https://m.media-amazon.com/images/I/71k--F6wVGL._AC_UL480_FMwebp_QL65_.jpg",
+      {cat},
       price: 34.5,
     },
   ];

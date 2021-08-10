@@ -41,9 +41,9 @@ export default function Cart({
       </Wrapper>
 
       <CartSideBar ref={$sideBarRef} className={isToggle ? "expand" : "shrink"}>
-        <SideBarHeader>shopping cart</SideBarHeader>
+        <SideBarHeader>Carrito de Compras </SideBarHeader>
         {carts.length === 0 ? (
-          <EmptyCart>Empty Cart</EmptyCart>
+          <EmptyCart>Carrito vacío </EmptyCart>
         ) : (
           carts.map(({ product, quantity }) => (
             <Card key={product.id}>
@@ -58,7 +58,7 @@ export default function Cart({
                 </CardRow>
                 <CardRow>
                   <CardTitle>
-                    Total Quantity ({quantity}) - ${product.price * quantity}
+                    Cantidad Total ({quantity}) - S/{product.price * quantity}
                   </CardTitle>
                 </CardRow>
               </CardBody>
@@ -67,8 +67,20 @@ export default function Cart({
         )}
 
         {carts.length !== 0 && (
-          <ClearButton onClick={() => clearCart()}>Clear Cart</ClearButton>
+          <ClearButton onClick={() => clearCart()}>Limpiar Carrito</ClearButton>
         )}
+         {carts.length !== 0 && (
+        <button style={{
+          display:'block',
+          justifyContent:'center',
+          backgroundColor:'#1a508b',
+          color:'white',
+          margin:'0 auto',
+          marginTop:'50px',
+          backgroundSize:'100vw',
+          border:'none',
+
+        }}> Comprar </button>)}
       </CartSideBar>
     </>
   );
